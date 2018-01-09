@@ -1,0 +1,2 @@
+ZhouXuan-YunWei-1
+nginx-tcp-proxy     ansible_ssh_host=127.0.0.10 ansible_ssh_user=root   ansible_ssh_port=22 ansible_ssh_pass=123456

@@ -1,0 +1,14 @@
+# @Author: seven
+# @Date:   2018-01-03T17:55:45+08:00
+# @Filename: test.yml
+# @Last modified by:   seven
+# @Last modified time: 2018-01-04T17:26:30+08:00
+
+---
+
+- hosts: "{{ host_list }}"
+  gather_facts: no
+
+  tasks:
+    - name: "ping"
+      shell: pwd
