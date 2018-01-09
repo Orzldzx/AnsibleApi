@@ -16,3 +16,43 @@ api.run_playbook(<host>, <playbookfile>)
 api.get_result()    # 字典
 api.get_json()      # json
 ```
+
+# hosts 文件格式
+
+- ini
+
+```
+[group1]
+host1   ansible_ssh_host = xxx.xx.xx.xxx
+```
+
+- 字典
+
+```
+{
+    'group1': {
+        'hosts': [
+            '1.1.1.1', '2.2.2.2'
+        ],
+        'vars': {
+            'some_vars': 'some_values'
+        },
+        'children': [
+            'other_group'
+        ]
+    },
+    'group2': {
+        'hosts': {
+            'host1': {
+                'ansible_ssh_host': '1.1.1.1',
+                'ansible_ssh_pass': '123456',
+                'ansible_ssh_user': 'root'
+            },
+            'host2': {
+                'ansible_ssh_host': '2.2.2.2',
+                'ansible_ssh_pass': '123456'
+            }
+        }
+    }
+}
+```
