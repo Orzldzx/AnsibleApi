@@ -8,7 +8,7 @@
 from AnsibleApi import MyApi
 
 
-api = Mysql(<hostfile>)
+api = MyApi(<hostfile>)
 
 # 执行 Ad-hoc
 api.run(<host>, <module>, <module_args>)
