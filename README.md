@@ -7,7 +7,7 @@
 
 from AnsibleApi import MyApi
 
-
+# hostfile 可以是一个静态文件, 也可以是一个get_inventory文件 (最后把取到的内容print出来)
 api = MyApi(<hostfile>)
 
 # 执行 Ad-hoc
